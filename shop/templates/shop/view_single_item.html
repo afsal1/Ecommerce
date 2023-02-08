@@ -1,0 +1,23 @@
+{% extends 'shop/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row">
+    <div class="col-lg-6 product_img">
+        <a class="btn btn-outline-secondary mb-2" href="{% url 'shop' %}">&#x2190; Back</a>
+
+        <img class="product_img" style="width: 100%;" src="{{product.imageURL}}">
+       
+      </div>
+
+    <div class="col-lg-6">
+       
+        <div class="">
+            <div class="pt-5"></div>
+            <h6><strong>{{product.name}}</strong></h6>
+            <h4 style="display: inline-block;"><strong>&#8377; {{product.price|floatformat:2}}</strong></h4>
+        </div>
+
+    </div>
+</div>
+{% endblock content %}
